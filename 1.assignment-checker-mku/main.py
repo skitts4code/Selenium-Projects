@@ -46,7 +46,7 @@ course_code.click()
 course_item = driver.find_element(By.XPATH, "//*[contains(text(), 'Assignments')]")
 course_item.click()
 
-driver.save_screenshot("assignment1.png")
+driver.save_screenshot("./pics/assignment1.png")
 
 time.sleep(100)
 
