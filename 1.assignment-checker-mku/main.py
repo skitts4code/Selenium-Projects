@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 # path to chromedriver
-service = Service(executable_path="PATH TO CHROME DRIVER")
+service = Service(executable_path="/home/skt/webdriver/chromedriver")
 
 
 driver = webdriver.Chrome(service=service)
@@ -47,6 +47,27 @@ course_item = driver.find_element(By.XPATH, "//*[contains(text(), 'Assignments')
 course_item.click()
 
 driver.save_screenshot("./pics/assignment1.png")
+
+
+driver.back()
+
+time.sleep(5)
+
+#Check for Tests and Quizzes
+WebDriverWait(driver, 10).until(
+    EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Tests & Quizzes')]"))
+)
+
+tests = driver.find_element(By.XPATH, "//*[contains(text(), 'Tests & Quizzes')]")
+tests.click()
+
+time.sleep(5)
+
+# tests = driver.find_element(By.XPATH, "//*[contains(text(), 'Assessment') or contains(text(), 'CAT')]")
+# tests.click()
+
+driver.save_screenshot("./pics/Tests.png")
+
 
 time.sleep(100)
 
