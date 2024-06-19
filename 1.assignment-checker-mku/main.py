@@ -19,9 +19,12 @@ WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.NAME, "eid"))
 )
 
+reg_no = input("Enter your registration number: ")
+pass_word = input("Enter your password: ")
+
 user_name = driver.find_element(By.NAME, "eid")
 user_name.clear()
-user_name.send_keys("REG-NO" + Keys.ENTER )
+user_name.send_keys(reg_no + Keys.ENTER )
 
 WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.NAME, "eid"))
@@ -29,7 +32,7 @@ WebDriverWait(driver, 10).until(
 
 pass_word = driver.find_element(By.NAME, "pw")
 pass_word.clear()
-pass_word.send_keys("PASSWORD" + Keys.ENTER )
+pass_word.send_keys(pass_word + Keys.ENTER )
 
 WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'BBM4104')]"))
