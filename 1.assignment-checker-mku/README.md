@@ -6,4 +6,6 @@ A python script that checks for assignments on the MKU student Portal and takes 
 - [x] Add list of courses to run a for loop ✅
 
 - Make sure selenium driver and chrome version are both fully upto date
-- Links to Selenium for linux and Windows [Here](https://googlechromelabs.github.io/chrome-for-testing/)
+- <p><a href="https://googlechromelabs.github.io/chrome-for-testing/" target="_blank">Links to Selenium for Linux and Windows Here</a></p>
+
+
