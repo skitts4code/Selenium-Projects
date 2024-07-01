@@ -1,4 +1,4 @@
-#🚧 Migrating to Selenium 
+# 🚧 Migrating to Selenium 
 # mku-assignment-checker
 A python script that checks for assignments on the MKU student Portal and takes a screenshot
 ## TODO
